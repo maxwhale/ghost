@@ -1,8 +1,9 @@
 FROM ubuntu:14.04
 MAINTAINER Max
 
-RUN apt-get update && apt-get install -y python g++ make software-properties-common --force-yes curl unzip htop screen npm nodejs
+RUN apt-get update && apt-get install -y python g++ make software-properties-common --force-yes curl unzip htop screen npm
 RUN add-apt-repository ppa:chris-lea/node.js
+RUN apt-get install -y nodejs
 RUN curl -L https://ghost.org/zip/ghost-latest.zip > /tmp/ghost.zip
 RUN useradd ghost
 RUN mkdir -p /opt/ghost
