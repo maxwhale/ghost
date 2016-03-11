@@ -8,7 +8,7 @@ RUN useradd ghost
 RUN mkdir -p /opt/ghost
 WORKDIR /opt/ghost
 RUN unzip /tmp/ghost.zip
-RUN npm install --production
+RUN npm install --production -g contextify
 
 # Volumes
 RUN mkdir /data
