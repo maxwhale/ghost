@@ -9,7 +9,7 @@ ADD http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz /root
 RUN cd root && \
     tar zxvf node-v0.12.0.tar.gz
 
-RUN cd node-v0.12.0 && \
+RUN cd /root/node-v0.12.0 && \
     ./configure && \
     make && \
     make install
