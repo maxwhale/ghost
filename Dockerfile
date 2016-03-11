@@ -6,9 +6,10 @@ RUN apt-get -qq update
 RUN apt-get -qq -y install build-essential python unzip sqlite3 libsqlite3-dev htop screen curl
 
 ADD http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz /root
+RUN cd root && \
+    tar zxvf node-v0.12.0.tar.gz
 
-RUN cd /root && \
-    cd node-v0.12.0 && \
+RUN cd node-v0.12.0 && \
     ./configure && \
     make && \
     make install
