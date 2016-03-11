@@ -12,8 +12,6 @@ RUN cd /root && \
     ./configure && \
     make && \
     make install && \
-    cd .. && \
-    rm -rf node-v*
 
 ADD https://ghost.org/zip/ghost-latest.zip /tmp/ghost.zip
 RUN unzip -d /ghost /tmp/ghost.zip
